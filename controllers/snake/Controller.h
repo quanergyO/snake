@@ -3,19 +3,22 @@
 
 #include "../../brick_game/snake/Model.h"
 
-namespace Snake {
+namespace s21 {
+    namespace Snake {
 
 
-class Controller
-{
-public:
-    Controller(Model &model);
-    ~Controller() = default;
+        class Controller {
+        public:
+            Controller(Model &model);
 
-private:
-    Model &model_;
-};
+            ~Controller() = default;
 
-} // namespace Snake
+            void move(const UserAction_t &action);
 
+        private:
+            Model &model_;
+        };
+
+    } // namespace Snake
+} // namespace s21
 #endif //SRC_CONTROLLER_H

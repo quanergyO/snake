@@ -7,8 +7,8 @@ const size_t ROWS = 20;
 const size_t COLS = 10;
 
 typedef struct {
-    size_t x;
-    size_t y;
+    int x;
+    int y;
 } Point_t;
 
 typedef enum {
