@@ -20,6 +20,7 @@ class MainWindow : public QMainWindow {
   ~MainWindow();
 
   void updateGameInfo(const GameInfo_t &gameInfo);
+  void handleMouseClick(QMouseEvent *event);
 
  protected:
   void keyPressEvent(QKeyEvent *event) override;
@@ -28,7 +29,9 @@ class MainWindow : public QMainWindow {
   void sendUserAction(UserAction_t action);
 
   Ui::MainWindow *ui;
-  Snake::Controller &controller_;
+  s21::Snake::Controller &controller_;
+  const size_t ROWS = 20;
+  const size_t COLS = 10;
 };
 
 #endif  // MAINWINDOW_H
